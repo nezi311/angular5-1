@@ -1,15 +1,16 @@
 <div class="container color-dark">
   <div class="col">
-    <p>Add a bucket list</p>
+    <p>Dodaj do listy</p>
   </div>
   <div class="col">
-    <p>Your bucket ({{liczbaItemow}})</p> <!-- Uzycie interpolacji do wyswietlenia licznika-->
+    <p>Twoja lista ({{liczbaItemow}})</p> <!-- Uzycie interpolacji do wyswietlenia licznika-->
   </div>
 </div>
 <!-- inicjalizacja animacji, oraz nowych animacji-->
 <div class="container color-light" [@celeTab]="celeTab.length">
   <div class="col">
-    <p class="sm">Use this form below to add a new bucket list goal. What you want do to with your life</p>
+    <p class="sm">Uzyj formularza ponizej aby dodac cele do listy. Co byscie chcieli zrobic?</p>
+    <!-- Use this form below to add a new bucket list goal. What you want do to with your life-->
 
     <form>
       <!-- przypisanie zmiennej celTxt z modelu do tego elementu (input) -->
