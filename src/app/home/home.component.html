@@ -1,0 +1,30 @@
+<div class="container color-dark">
+  <div class="col">
+    <p>Add a bucket list</p>
+  </div>
+  <div class="col">
+    <p>Your bucket ({{liczbaItemow}})</p> <!-- Uzycie interpolacji do wyswietlenia licznika-->
+  </div>
+</div>
+<!-- inicjalizacja animacji, oraz nowych animacji-->
+<div class="container color-light" [@celeTab]="celeTab.length">
+  <div class="col">
+    <p class="sm">Use this form below to add a new bucket list goal. What you want do to with your life</p>
+
+    <form>
+      <!-- przypisanie zmiennej celTxt z modelu do tego elementu (input) -->
+      <input type="text" class="txt" name="item" placeholder="Life goal.." [(ngModel)]="celTxt">
+      <!-- wywołanie funkcji "dodajItem" po naciśnięciu przycisku-->
+      <input type="submit" class="btn" [value]="btnTxt" (click)="dodajItem()">
+
+    </form>
+
+  </div>
+  <div class="col">
+    <!-- uzycie fora na tablicy celeTab, podonie jak w php for each-->
+    <p class="life-container" *ngFor="let cel of celeTab; let i = index" (click)="usunItem(i)">
+      <!-- uzycie interpolacji, wyswietlenie pojedynczych celów znajdujących się w tablicy-->
+      {{ cel }}
+    </p>
+  </div>
+</div>
